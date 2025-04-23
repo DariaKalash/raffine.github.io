@@ -1,0 +1,327 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: Regular;
+    src: url(/src/fonts/Montserrat-Regular.ttf);
+}
+
+:root {
+    --color-white: #F0F0F0;
+    --color-blue: #22333B;
+    --color-brown: #8C6D51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    background-color: var(--color-white);
+    font-family: 'Montserrat';
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+header {
+    border-bottom: thin solid var(--color-blue);
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: thin solid var(--color-blue);
+}
+
+.logo {
+    display: block;
+}
+
+.menuHeaderList {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuHeaderItems:not(:last-child) {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: var(--color-brown);
+}
+
+a:active {
+    color: var(--color-brown);
+}
+
+.burgerButton {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    z-index: 20;
+}
+
+.burgerButton span {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-blue);
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.burgerButton span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.burgerButton span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .burgerButton span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .burgerButton span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .burgerButton span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+p {
+    font-size: 24px;
+    color: var(--color-blue);
+}
+
+.text1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text2 {
+    font-size: 356px;
+}
+
+.blockMain {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+}
+
+.block404 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.comeBack {
+    border: 2px solid var(--color-blue);
+    font-size: 32px;
+    text-transform: uppercase;
+    padding: 5px 170px 5px 170px;
+    text-align: center;
+}
+
+.comeBack:hover {
+    border: 2px solid var(--color-brown);
+    color: var(--color-brown);
+}
+
+.comeBack:active {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: var(--color-brown);
+}
+
+.footer {
+    border-top: thin solid var(--color-blue);
+    padding: 20px 50px 50px 50px;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footerTop img {
+    display: block;
+}
+
+.footerTop nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footerTop nav ul li {
+    display: inline;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+}
+
+.footerBottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerBottom ul li {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    a {font-size: 20px;}
+    p {font-size: 24px;}
+    .header {padding: 10px 30px 10px 30px;}
+    .contactButton {
+        padding: 5px 30px 5px 30px;
+        font-size: 20px;}
+    .menuHeaderCenter li {
+        margin-right: 30px;
+        font-size: 20px;}
+    .text2 {font-size: 256px;}
+    .block404 {width: 600px;}
+    .comeBack {
+        border: 2px solid var(--color-blue);
+        font-size: 24px;
+        padding: 5px 100px 5px 100px;
+    }
+    .errorImage {max-width: 220px; max-height: 320px;}
+    .menuHeaderCenter li {font-size: 20px;}
+    .contactButton {font-size: 20px;}
+}
+
+@media (max-width: 1024px) {
+    .burgerButton {
+        display: block;
+    }
+
+    .menuHeader {
+        position: absolute;
+        left: -350px;
+        width: 350px;
+        border-bottom: thin solid var(--color-blue);
+        top: 0;
+        background-color: var(--color-white);
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+    }
+
+    .menuHeaderList {
+        display: block;
+    }
+
+    .menuHeaderLink {
+        display: block;
+        padding: 10px 0px;
+    }
+
+    .header.open .menuHeader {
+        transform: translateX(100%);
+    }
+    
+    a {font-size: 18px;}
+    p {font-size: 20px;}
+    .text2 {font-size: 180px;}
+    .block404 {width: 400px;}
+    .comeBack {
+        border: 2px solid var(--color-blue);
+        font-size: 20px;
+        padding: 5px 50px 5px 50px;
+    }
+    .errorImage {max-width: 150px; max-height: 220px;}
+    .contactButton {font-size: 18px;}
+}
+
+@media (max-width: 425px) {
+    .burgerButton {
+        display: block;
+    }
+
+    .menuHeader {
+        position: absolute;
+        left: -350px;
+        width: 350px;
+        border-bottom: thin solid var(--color-blue);
+        top: 0;
+        background-color: var(--color-white);
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+    }
+
+    .menuHeaderList {
+        display: block;
+    }
+
+    .menuHeaderLink {
+        display: block;
+        padding: 10px 0px;
+    }
+
+    .header.open .menuHeader {
+        transform: translateX(100%);
+    }
+    
+    a {font-size: 16px;}
+    p {font-size: 20px;}
+    .text2 {font-size: 120px;}
+    .block404 {
+        width: 250px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .footerTop {display: block;}
+    .comeBack {
+        border: 2px solid var(--color-blue);
+        font-size: 16px;
+        padding: 5px 10px 5px 10px;
+    }
+    .errorImage {max-width: 100px; max-height: 200px;}
+    .contactButton {font-size: 16px;}
+}

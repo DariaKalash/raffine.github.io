@@ -1,0 +1,491 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: Regular;
+    src: url(/src/fonts/Montserrat-Regular.ttf);
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-white: #F0F0F0;
+    --color-blue: #22333B;
+    --color-brown: #8C6D51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    background-color: var(--color-white);
+    font-family: 'Montserrat';
+}
+
+.no-native-scroll::wevkit-scrollbar {
+    display: none;
+}
+
+.no-native-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+header {
+    border-bottom: thin solid var(--color-blue);
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    display: block;
+}
+
+.menuHeaderList {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuHeaderItems:not(:last-child) {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: var(--color-brown);
+}
+
+a:active {
+    color: var(--color-brown);
+}
+
+.burgerButton {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    z-index: 20;
+}
+
+.burgerButton span {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-blue);
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.burgerButton span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.burgerButton span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .burgerButton span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .burgerButton span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .burgerButton span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.filtrCatalog {
+    border-bottom: thin solid var(--color-blue);
+    padding: 15px 50px 15px 50px;
+}
+
+.filtrCatalog ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.filtrCatalog li {
+    margin-right: 50px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 24px;
+    color: var(--color-blue);
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--color-brown);
+    margin-bottom: 10px;
+}
+
+span {
+    color: var(--color-brown);
+}
+
+.mainTovarBlock {
+    margin: 50px 50px 0px 50px;
+    column-count: 2;
+    gap: 20px;
+}
+
+.tovarImage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 660px;
+}
+
+.wantSimilar {
+    border: 2px solid var(--color-blue);
+    font-size: 32px;
+    text-transform: uppercase;
+    padding: 5px 250px 5px 250px;
+    text-align: center;
+}
+
+.wantSimilar:hover {
+    border: 2px solid var(--color-brown);
+    color: var(--color-brown);
+}
+
+.wantSimilar:active {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
+.tovarDescription {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+}
+
+.informationAboutTovar {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* max-width: 500px; */
+    gap: 50px;
+    margin-top: 15px;
+}
+
+.tovarCharacteristic {
+    gap: 10px;
+}
+
+.nameCharacteristic {
+    color: var(--color-brown);
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--color-blue);
+    padding-bottom: 50px;
+}
+
+.proposalTovarBlock {
+    margin: 200px 50px 200px 50px;
+}
+
+.proposalTovars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tovarCard {
+    max-width: 320px;
+    margin-bottom: 40px;
+}
+
+.nameFurniture {
+    font-size: 32px;
+    color: var(--color-brown);
+    margin-bottom: 10px;
+}
+
+.tovarCardText {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tovar {
+    display: inline-block;
+    transition: all 3s ease;
+}
+
+.tovarButton {
+    border: thin solid var(--color-blue);
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 5px 75px 5px 75px;
+}
+
+.tovarButton:hover {
+    border: thin solid var(--color-brown);
+    color: var(--color-brown);
+}
+
+.tovarButton:active {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: var(--color-brown);
+}
+
+.footer {
+    border-top: thin solid var(--color-blue);
+    padding: 20px 50px 50px 50px;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footerTop img {
+    display: block;
+}
+
+.footerTop nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footerTop nav ul li {
+    display: inline;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footerBottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerBottom ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1430px) {
+    .tovarImage {
+        max-width: 500px;
+    }
+
+    .tovarImage1 {
+        width: 440px;
+        height: 360px;
+    }
+
+    .tovarImage2 {
+        width: 330px;
+        height: 220px;
+    }
+
+    .tovarCard4, .tovarCard5 {
+        display: none;
+    }
+
+    p {font-size: 22px;}
+    a {font-size: 20px;}
+    h1 {font-size: 28px;}
+    h2 {font-size: 32px;}
+
+    .wantSimilar {
+        font-size: 24px;
+        padding: 5px 150px 5px 150px;
+    }
+
+    .tovarDescription {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .burgerButton {
+        display: block;
+    }
+
+    .menuHeader {
+        position: absolute;
+        left: -350px;
+        width: 350px;
+        border-bottom: thin solid var(--color-blue);
+        top: 0;
+        background-color: var(--color-white);
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+    }
+
+    .menuHeaderList {
+        display: block;
+    }
+
+    .menuHeaderLink {
+        display: block;
+        padding: 10px 0px;
+    }
+
+    .header.open .menuHeader {
+        transform: translateX(100%);
+    }
+
+    .mainTovarBlock {
+        column-count: 1;
+    }
+
+    .tovarImage {
+        max-width: 600px;
+    }
+
+    .tovarImage1 {
+        width: 440px;
+        height: 330px;
+    }
+
+    .tovarImage2 {
+        width: 200px;
+        height: 150px;
+    }
+
+    .tovarCard3, .tovarCard4, .tovarCard5 {
+        display: none;
+    }
+
+    p {font-size: 18px;}
+    a {font-size: 18px;}
+    h1 {font-size: 24px;}
+    h2 {font-size: 28px;}
+
+    .wantSimilar {
+        font-size: 20px;
+        padding: 5px 120px 5px 120px;
+    }
+
+    .tovarDescription {
+        width: 600px;
+    }
+
+    .proposalTovarBlock {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .burgerButton {
+        display: block;
+    }
+
+    .menuHeader {
+        position: absolute;
+        left: -350px;
+        width: 350px;
+        border-bottom: thin solid var(--color-blue);
+        top: 0;
+        background-color: var(--color-white);
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+    }
+
+    .menuHeaderList {
+        display: block;
+    }
+
+    .menuHeaderLink {
+        display: block;
+        padding: 10px 0px;
+    }
+
+    .header.open .menuHeader {
+        transform: translateX(100%);
+    }
+
+    .mainTovarBlock {
+        column-count: 1;
+    }
+
+    .tovarImage {
+        max-width: 400px;
+    }
+
+    .tovarImage1 {
+        width: 380px;
+        height: 230px;
+    }
+
+    .tovarImage2 {
+        width: 160px;
+        height: 120px;
+    }
+
+    .tovarCard2, .tovarCard3, .tovarCard4, .tovarCard5 {
+        display: none;
+    }
+
+    p {font-size: 16px;}
+    a {font-size: 16px;}
+    h1 {font-size: 20px;}
+    h2 {font-size: 24px;}
+
+    .wantSimilar {
+        font-size: 18px;
+        padding: 5px 80px 5px 80px;
+    }
+
+    .tovarDescription {
+        width: 360px;
+    }
+
+    .footerTop {
+        display: block;
+    }
+
+    .filtrCatalog {width: 400px;}
+}
