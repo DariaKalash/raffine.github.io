@@ -679,9 +679,9 @@ hr {
         margin: 50px 0px 50px 0px;
     }
 
-    .mainBlock {
+    /* .mainBlock {
         height: 600px;
-    }
+    } */
 
     .mainBlockContent {
         width: 400px;
@@ -795,5 +795,145 @@ hr {
     
     .answers {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .mainBlock,
+    .aboutBlock,
+    .seasonBlock,
+    .photoQuestions,
+    .answersQuestions,
+    .footerBottom {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .aboutBlockText2 {
+        display: none;
+    }
+
+    .aboutBlockImg2 {
+        display: none;
+    }
+
+    .answersQuestions {
+        margin-left: 40px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .mainBlockImage1 {
+        display: none;
+    }
+
+    .seasonBlockImage3 {
+        display: none;
+    }
+
+    .mainBlockImages,
+    .aboutBlock img,
+    .seasonBlockImage1,
+    .seasonBlockImage2,
+    .seasonBlockImage3,
+    .photoQuestion1,
+    .photoQuestion2,
+    .photoQuestion3 {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .mainBlockContent {
+        margin-left: 50px;
+    }
+
+    .mainBlockText,
+    .aboutBlockText,
+    .aboutBlockText1,
+    .aboutBlockText2,
+    .seasonBlockText1,
+    .seasonBlockText2,
+    .answersQuestions,
+    .footerBottom ul {
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .seasonBlockText1,
+    .seasonBlockText2 {
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .center {
+        height: 300px;
+        width: 300px;
+    }
+
+    .seasonBlock {
+        margin-left: 20px;
+    }
+
+    .seasonBlockColumn .left {
+        width: 350px;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 100px;
+        width: 350px;
+    }
+
+    h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    h3,
+    p,
+    .questions,
+    .answers,
+    a,
+    .nameFurniture,
+    .katalogButton {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .menuHeader {
+        width: 100%;
+        left: -100%;
+    }
+
+    .header.open .menuHeader {
+        transform: translateX(100%);
+    }
+
+    .burgerButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .katalogButton {
+        padding: 10px 40px;
+    }
+
+    .mainBlockButton {
+        padding: 10px 40px;
+    }
+
+    .footerTop nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
