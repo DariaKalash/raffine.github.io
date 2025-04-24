@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Montserrat';
     font-weight: Regular;
-    src: url(/src/fonts/Montserrat-Regular.ttf);
+    src: url('./src/fonts/Montserrat-Regular.ttf');
 }
 
 :root {
