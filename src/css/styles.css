@@ -798,7 +798,7 @@ hr {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     .mainBlock,
     .aboutBlock,
     .seasonBlock,
